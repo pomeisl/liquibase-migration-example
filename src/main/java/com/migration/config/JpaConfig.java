@@ -5,7 +5,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
-@EnableJpaRepositories(basePackages = {"com.liquibase.migration.example.repository"})
+@EnableJpaRepositories(basePackages = {"com.migration.repository"})
 @EnableTransactionManagement
 public class JpaConfig {
 }
