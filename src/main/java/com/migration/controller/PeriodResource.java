@@ -17,7 +17,7 @@ import lombok.experimental.FieldDefaults;
 @RequiredArgsConstructor
 
 @RestController
-@RequestMapping("period")
+@RequestMapping("periods")
 public class PeriodResource {
     PeriodService periodService;
 

@@ -17,7 +17,7 @@ import lombok.experimental.FieldDefaults;
 @RequiredArgsConstructor
 
 @RestController
-@RequestMapping("evaluation")
+@RequestMapping("evaluations")
 public class EvaluationResource {
 
     EvaluationService evaluationService;
