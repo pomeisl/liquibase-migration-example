@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+  <changeSet id="create_sequences" author="fpomeisl">
+    <createSequence sequenceName="period_seq"
+                    startValue="1"
+                    incrementBy="1"/>
+    <createSequence sequenceName="evaluation_seq"
+                    startValue="1"
+                    incrementBy="1"/>
+  </changeSet>
+
+  <changeSet id="create_tables" author="fpomeisl">
+    <createTable tableName="periods">
+      <column name="id" type="int">
+        <constraints primaryKey="true" unique="true"/>
+      </column>
+    </createTable>
+
+    <createTable tableName="evaluations">
+      <column name="id" type="int">
+        <constraints primaryKey="true" unique="true"/>
+      </column>
+    </createTable>
+  </changeSet>
+
+  <changeSet id="insert_data" author="fpomeisl">
+    <loadData tableName="periods"
+              file="db/data/period.csv"
+              separator=";"/>
+    <loadData tableName="evaluations"
+              file="db/data/evaluation.csv"
+              separator=";"/>
+  </changeSet>
+</databaseChangeLog>
