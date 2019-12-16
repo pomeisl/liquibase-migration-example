@@ -54,3 +54,52 @@ id;period_id
 |3|2|
 |4|2|
 |5|2|
+
+responses
+
+* http://localhost:8080/periods
+    ```json
+    [
+      {
+        "id": 1
+      },
+      {
+        "id": 2
+      }
+    ]
+    ```
+* http://localhost:8080/evaluations
+    ```json
+    [
+      {
+        "id": 1,
+        "period": {
+          "id": 1
+        }
+      },
+      {
+        "id": 2,
+        "period": {
+          "id": 1
+        }
+      },
+      {
+        "id": 3,
+        "period": {
+          "id": 2
+        }
+      },
+      {
+        "id": 4,
+        "period": {
+          "id": 2
+        }
+      },
+      {
+        "id": 5,
+        "period": {
+          "id": 2
+        }
+      }
+    ]
+    ```
